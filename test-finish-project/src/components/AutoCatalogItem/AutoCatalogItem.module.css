@@ -1,0 +1,23 @@
+.buttonLike {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: -42px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemLike {
+  display: flex;
+  align-items: flex-start;
+
+
+  max-width: 274px;
+}
+
+.imageAuto {
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
+}
