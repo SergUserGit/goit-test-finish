@@ -13,18 +13,18 @@ function App() {
         <NavLink className={css.link} id={"linkHome"} to="/" end>
           Home
         </NavLink>
-        <NavLink className={css.link} id={"linkAutoCatalog"} to="/autocatalog">
-          Auto catalog
+        <NavLink className={css.link} id={"linkAutoCatalog"} to="/catalog">
+          Catalog
         </NavLink>
-        <NavLink className={css.link} id={"linkLikesList"} to="/likeslist">
-          Likes list
+        <NavLink className={css.link} id={"linkLikesList"} to="/favorites">
+          Favorites
         </NavLink>
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="autocatalog" element={<AutoCatalog />}></Route>
-          <Route path="likeslist" element={<LikesList />}></Route>
+          <Route path="catalog" element={<AutoCatalog />}></Route>
+          <Route path="favorites" element={<LikesList />}></Route>
           <Route path="*" element={<Home />} />
         </Routes>
       </Suspense>

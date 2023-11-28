@@ -1,8 +1,6 @@
+import AutoCatalogItem from "../AutoCatalogItem/AutoCatalogItem";
+
 const AutoCatalog = () => {
-  return (
-    <section>
-      <h1>Auto catalog</h1>
-    </section>
-  );
+  return <AutoCatalogItem />;
 };
 export default AutoCatalog;
