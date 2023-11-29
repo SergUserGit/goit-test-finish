@@ -33,8 +33,10 @@ const AutoCatalogItem = ({
       </div>
       <div className={css.infoModelAuto}>
         <p className={css.paragraphInfoAuto}>
-          <span>{make}</span>&nbsp;<span>{model}</span>
-          <span>,</span>&nbsp;<span>{year}</span>
+          <span className={css.styleBlakInfo}>{make}</span>&nbsp;
+          <span className={css.styleBlueInfo}>{model}</span>
+          <span className={css.styleBlakInfo}>,</span>&nbsp;
+          <span className={css.styleBlakInfo}>{year}</span>
         </p>
         <span className={css.spanRentalPrice}>{rentalPrice}</span>
       </div>
