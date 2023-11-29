@@ -12,12 +12,55 @@
 .itemLike {
   display: flex;
   align-items: flex-start;
-
-
   max-width: 274px;
 }
 
 .imageAuto {
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
+}
+
+.infoModelAuto {
+  display: flex;
+  align-items: center;
+}
+
+.mainDivAuto {
+  display: flex;
+  flex-direction: column;
+  max-width: 274px;
+}
+
+.spanRentalPrice {
+  margin-left: auto;
+}
+
+.paraghDateAuto {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+}
+
+.buttonLeanMore {
+  border-radius: 12px;
+  background: #3470FF;
+  cursor: pointer;
+  border: none;
+  padding-left: 99px;
+  padding-right: 99px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.spanLeanMore {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.paragraphInfoAuto {
+  margin: 0;
 }
