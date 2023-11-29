@@ -64,7 +64,7 @@ const AutoCatalogItem = ({
       <button onClick={onClickButtonLearnMore} className={css.buttonLeanMore}>
         <span className={css.spanLeanMore}>Learn more</span>
       </button>
-      {detailedIsOpen && <DetailedInformation />}
+      {detailedIsOpen && <DetailedInformation isCloseProps={detailedIsOpen} />}
     </div>
   );
 };
