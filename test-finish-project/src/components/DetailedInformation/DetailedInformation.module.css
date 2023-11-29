@@ -1,0 +1,14 @@
+.backDrop {
+  background: rgba(18, 20, 23, 0.50);
+  width: 1440px;
+  min-height: 1051px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalDetail {
+  width: 541px;
+  border-radius: 24px;
+  background: #FFF;
+}

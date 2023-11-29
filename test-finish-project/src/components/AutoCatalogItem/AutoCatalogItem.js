@@ -4,6 +4,7 @@ import like_checked from "../../images/heart_checked.svg";
 import split_auto from "../../images/split_auto.svg";
 import css from "./AutoCatalogItem.module.css";
 import { useState } from "react";
+import DetailedInformation from "../DetailedInformation/DetailedInformation";
 
 const AutoCatalogItem = ({
   make,
@@ -18,9 +19,14 @@ const AutoCatalogItem = ({
   functionalities,
 }) => {
   const [isLike, setIsLike] = useState(false);
+  const [detailedIsOpen, setDetailedIsOpen] = useState(false);
 
   function onClickButtonLike() {
     setIsLike((state) => !state);
+  }
+
+  function onClickButtonLearnMore() {
+    setDetailedIsOpen(true);
   }
 
   return (
@@ -55,9 +61,10 @@ const AutoCatalogItem = ({
         <img src={split_auto} alt="split auto" />
         <span className={css.spanAutoInfo}>{functionalities}</span>
       </p>
-      <button className={css.buttonLeanMore}>
+      <button onClick={onClickButtonLearnMore} className={css.buttonLeanMore}>
         <span className={css.spanLeanMore}>Learn more</span>
       </button>
+      {detailedIsOpen && <DetailedInformation />}
     </div>
   );
 };
