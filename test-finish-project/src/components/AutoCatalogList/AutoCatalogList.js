@@ -11,7 +11,7 @@ const AutoCatalogList = function ({ autoCatalogList }) {
   }
 
   return (
-    <ul>
+    <ul className={css.AutoCatalogList}>
       {autoCatalogList.map(
         ({
           id,

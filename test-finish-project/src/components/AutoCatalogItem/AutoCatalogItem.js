@@ -80,7 +80,6 @@ const AutoCatalogItem = ({
       </button>
       {detailedIsOpen && (
         <DetailedInformation
-          isCloseProps={detailedIsOpen}
           make={make}
           model={model}
           year={year}

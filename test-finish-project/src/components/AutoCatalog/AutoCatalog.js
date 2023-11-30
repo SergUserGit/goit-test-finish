@@ -1,33 +1,58 @@
-import AutoCatalogItem from "../AutoCatalogItem/AutoCatalogItem";
-
+import React, { useState, useEffect } from "react";
+import AutoCatalogList from "../AutoCatalogList/AutoCatalogList";
+import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
+let page = 1;
 const AutoCatalog = () => {
+  const countOfPagePagination = 12;
+
+  const [autoCatalog, SetAutoCatalog] = useState([]);
+  const [countOfElement, SetCountOfElement] = useState(12);
+  const [visibleLoadMore, SetvisibleLoadMore] = useState(true);
+
+  function getCopyArray(Array, indexFirst, IndexLast) {
+    return Array.slice(indexFirst, IndexLast);
+  }
+
+  function onClickLoadeMoreBtn() {
+    page += 1;
+    const firstElement = page * countOfPagePagination;
+    SetCountOfElement(firstElement);
+    if (firstElement >= autoCatalog.length) {
+      SetvisibleLoadMore(false);
+    }
+  }
+
+  useEffect(() => {
+    const URL = "https://656876dd9927836bd974dc7c.mockapi.io/advert/advert";
+    fetch(URL)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(new Error(`Немає даних по запиту`));
+      })
+      .then((data) => {
+        SetAutoCatalog((state) => data);
+      })
+      .catch((error) => {})
+      .finally(() => {});
+  }, []);
   return (
-    <AutoCatalogItem
-      make="Buick"
-      model="Enclave"
-      year={2008}
-      rentalPrice="$40"
-      adressCity="Kiev"
-      adressCountry="Ukraine"
-      rentalCompany="Luxury Car Rentals"
-      type="Premium Suv"
-      idAuto={9582}
-      functionalities="Power liftgate"
-      fuelConsumption={10.5}
-      engineSize="3.6L V6"
-      description="The Buick Enclave is a stylish and spacious SUV known for its comfortable ride and luxurious features."
-      accesOne="Leather seats"
-      accesTwo="Panoramic sunroof"
-      functionalOne="Power liftgate"
-      accesThree="Premium audio system"
-      functionalTwo="Remote start"
-      functionalThree="Blind-spot monitoring"
-      minimumAge={25}
-      rentalConditionTwo="Valid driver’s license"
-      rentalConditionThree="Security deposite required"
-      mileAge={5858}
-      imgAuto=""
-    />
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr",
+        gridGap: "29px",
+        paddingBottom: "24px",
+      }}
+    >
+      <AutoCatalogList
+        autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
+      />
+      {visibleLoadMore && (
+        <ButtonLoadMore onClickLoadeMoreBtn={onClickLoadeMoreBtn} />
+      )}
+    </div>
   );
 };
 export default AutoCatalog;

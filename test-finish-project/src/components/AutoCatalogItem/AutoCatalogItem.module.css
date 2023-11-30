@@ -12,13 +12,15 @@
 .itemLike {
   display: flex;
   align-items: flex-start;
-  max-width: 274px;
+  max-width: 401px;
   margin-bottom: 14px;
 }
 
 .imageAuto {
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
+  width: 401px;
+  height: 268px;
 }
 
 .infoModelAuto {
@@ -30,7 +32,7 @@
 .mainDivAuto {
   display: flex;
   flex-direction: column;
-  max-width: 274px;
+  max-width: 401px;
 }
 
 .spanRentalPrice {

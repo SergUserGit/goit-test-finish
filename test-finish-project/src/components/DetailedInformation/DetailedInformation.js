@@ -5,7 +5,6 @@ import split_auto from "../../images/split_auto.svg";
 import { useState } from "react";
 
 const DetailedInformation = ({
-  isCloseProps,
   make,
   model,
   year,
@@ -29,7 +28,7 @@ const DetailedInformation = ({
   rentalPrice,
   imgAuto,
 }) => {
-  const [isClose, setIsClose] = useState(!isCloseProps);
+  const [isClose, setIsClose] = useState(false);
 
   function convertMileAge(mileAge) {
     const valueOne = mileAge / 1000;
@@ -41,12 +40,12 @@ const DetailedInformation = ({
   }
 
   function onClickButtonIsClose() {
-    setIsClose(isCloseProps);
+    setIsClose(true);
   }
 
   return (
     <>
-      {isClose === !isCloseProps && (
+      {isClose === false && (
         <div onClick={onClickButtonIsClose} className={css.backDrop}>
           <div className={css.modalDetail}>
             <button onClick={onClickButtonIsClose} className={css.buttonClose}>
