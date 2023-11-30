@@ -30,6 +30,7 @@ const AutoCatalogItem = ({
   rentalConditionTwo,
   rentalConditionThree,
   mileAge,
+  imgAuto,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -43,9 +44,9 @@ const AutoCatalogItem = ({
   }
 
   return (
-    <div className={css.mainDivAuto}>
+    <li className={css.mainDivAuto}>
       <div className={css.itemLike}>
-        <img className={css.imageAuto} src={cardAuto} alt="card auto" />
+        <img className={css.imageAuto} src={imgAuto} alt="card auto" />
         <button onClick={onClickButtonLike} className={css.buttonLike}>
           <img src={isLike ? like_checked : like} alt="like" />
         </button>
@@ -101,9 +102,10 @@ const AutoCatalogItem = ({
           rentalConditionThree={rentalConditionThree}
           mileAge={mileAge}
           rentalPrice={rentalPrice}
+          imgAuto={imgAuto}
         />
       )}
-    </div>
+    </li>
   );
 };
 export default AutoCatalogItem;

@@ -27,6 +27,7 @@ const DetailedInformation = ({
   rentalConditionThree,
   mileAge,
   rentalPrice,
+  imgAuto,
 }) => {
   const [isClose, setIsClose] = useState(!isCloseProps);
 
@@ -51,11 +52,7 @@ const DetailedInformation = ({
             <button onClick={onClickButtonIsClose} className={css.buttonClose}>
               <img src={image_close} alt="close" />
             </button>
-            <img
-              className={css.image_test_big}
-              src={image_test_big}
-              alt="test big"
-            />
+            <img className={css.image_test_big} src={imgAuto} alt="test big" />
             <p className={css.detailInfoAuto}>
               <span className={css.spanMakeDetail}>{make}</span>&nbsp;
               <span className={css.spanModelDetail}>{model}</span>

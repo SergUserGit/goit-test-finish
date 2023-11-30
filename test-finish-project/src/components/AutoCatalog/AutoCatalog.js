@@ -26,6 +26,7 @@ const AutoCatalog = () => {
       rentalConditionTwo="Valid driver’s license"
       rentalConditionThree="Security deposite required"
       mileAge={5858}
+      imgAuto=""
     />
   );
 };
