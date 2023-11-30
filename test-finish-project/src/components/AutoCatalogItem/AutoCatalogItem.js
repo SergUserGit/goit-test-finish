@@ -17,6 +17,15 @@ const AutoCatalogItem = ({
   type,
   idAuto,
   functionalities,
+  fuelConsumption,
+  engineSize,
+  description,
+  accesOne,
+  accesTwo,
+  functionalOne,
+  accesThree,
+  functionalTwo,
+  functionalThree,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -64,7 +73,27 @@ const AutoCatalogItem = ({
       <button onClick={onClickButtonLearnMore} className={css.buttonLeanMore}>
         <span className={css.spanLeanMore}>Learn more</span>
       </button>
-      {detailedIsOpen && <DetailedInformation isCloseProps={detailedIsOpen} />}
+      {detailedIsOpen && (
+        <DetailedInformation
+          isCloseProps={detailedIsOpen}
+          make={make}
+          model={model}
+          year={year}
+          adressCity={adressCity}
+          adressCountry={adressCountry}
+          idAuto={idAuto}
+          type={type}
+          fuelConsumption={fuelConsumption}
+          engineSize={engineSize}
+          description={description}
+          accesOne={accesOne}
+          accesTwo={accesTwo}
+          functionalOne={functionalOne}
+          accesThree={accesThree}
+          functionalTwo={functionalTwo}
+          functionalThree={functionalThree}
+        />
+      )}
     </div>
   );
 };

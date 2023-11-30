@@ -13,9 +13,11 @@
   background: #FFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding-top: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+
 }
 
 .buttonClose {
@@ -31,4 +33,36 @@
 .image_test_big {
   border-radius: 14px;
   background: #F3F3F2;
+}
+
+.detailInfoAuto {
+  margin: 0;
+}
+
+.detailCharakterAuto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.detailDescription {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.headAccessories {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.detailAccessFunctionalAuto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 24px;
+  gap: 4px;
 }
