@@ -34,10 +34,12 @@
 .image_test_big {
   border-radius: 14px;
   background: #F3F3F2;
+  margin-bottom: 14px;
 }
 
 .detailInfoAuto {
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .detailCharakterAuto {
@@ -52,11 +54,23 @@
 .detailDescription {
   margin: 0;
   margin-bottom: 24px;
+
+  color: #121417;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .headAccessories {
   margin: 0;
   margin-bottom: 8px;
+
+  color: #121417;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .detailAccessFunctionalAuto {
@@ -71,10 +85,19 @@
 .headRentalConditions {
   margin: 0;
   margin-bottom: 13px;
+
+  color: #121417;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .minimumAgeParagrah {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 35px;
   background: #F9F9F9;
   padding-left: 14px;
@@ -86,6 +109,9 @@
 .rentalConditionTwo {
   margin: 0;
   border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #F9F9F9;
   padding-left: 14px;
   padding-right: 14px;
@@ -94,6 +120,9 @@
 }
 
 .rentalConditionThree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding-left: 14px;
   padding-right: 14px;
@@ -116,6 +145,9 @@
 }
 
 .mileAge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding-left: 14px;
   padding-right: 14px;
@@ -126,6 +158,9 @@
 }
 
 .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   border-radius: 35px;
   background: #F9F9F9;
@@ -152,4 +187,123 @@
   align-items: center;
   justify-content: center;
   width: 108px;
+}
+
+.spanMakeDetail {
+  color: #121417;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.spanModelDetail {
+  color: #3470FF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.spanSplitlDetail {
+  color: #121417;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.spanYearlDetail {
+  color: #121417;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.spanDetailCharakte {
+  color: rgba(18, 20, 23, 0.50);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.spanAccessFunctional {
+  color: rgba(18, 20, 23, 0.50);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+}
+
+.spanMinimumAgeDesc {
+  color: #363535;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.spanMinimumAgeValue {
+  color: #3470FF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.spanRentalConditionTwo {
+  color: #363535;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.spanRentalConditionThree {
+  color: #363535;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.spanMileageDesc {
+  color: #363535;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.spanMileageValue {
+  color: #3470FF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.spanPriceDesc {
+  color: #363535;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.spanPriceValue {
+  color: #3470FF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
 }

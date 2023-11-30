@@ -30,6 +30,15 @@ const DetailedInformation = ({
 }) => {
   const [isClose, setIsClose] = useState(!isCloseProps);
 
+  function convertMileAge(mileAge) {
+    const valueOne = mileAge / 1000;
+    return String(valueOne).replace(".", ",");
+  }
+
+  function changePrice(price) {
+    return price.replace("$", "") + "$";
+  }
+
   function onClickButtonIsClose() {
     setIsClose(isCloseProps);
   }
@@ -48,62 +57,80 @@ const DetailedInformation = ({
               alt="test big"
             />
             <p className={css.detailInfoAuto}>
-              <span>{make}</span>&nbsp;<span>{model}</span>
-              <span>,</span>&nbsp;<span>{year}</span>
+              <span className={css.spanMakeDetail}>{make}</span>&nbsp;
+              <span className={css.spanModelDetail}>{model}</span>
+              <span className={css.spanSplitlDetail}>,</span>&nbsp;
+              <span className={css.spanYearlDetail}>{year}</span>
             </p>
             <p className={css.detailCharakterAuto}>
-              <span>{adressCity}</span>
+              <span className={css.spanDetailCharakte}>{adressCity}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{adressCountry}</span>
+              <span className={css.spanDetailCharakte}>{adressCountry}</span>
               <img src={split_auto} alt="split auto" />
-              <span>id:&nbsp;{idAuto}</span>
+              <span className={css.spanDetailCharakte}>id:&nbsp;{idAuto}</span>
               <img src={split_auto} alt="split auto" />
-              <span>Year:&nbsp;{year}</span>
+              <span className={css.spanDetailCharakte}>Year:&nbsp;{year}</span>
               <img src={split_auto} alt="split auto" />
-              <span>Type:&nbsp;{type}</span>
+              <span className={css.spanDetailCharakte}>Type:&nbsp;{type}</span>
               <img src={split_auto} alt="split auto" />
-              <span>Fuel Consumption:&nbsp;{fuelConsumption}</span>
+              <span className={css.spanDetailCharakte}>
+                Fuel Consumption:&nbsp;{fuelConsumption}
+              </span>
               <img src={split_auto} alt="split auto" />
-              <span>Engine Size:&nbsp;{engineSize}</span>
+              <span className={css.spanDetailCharakte}>
+                Engine Size:&nbsp;{engineSize}
+              </span>
             </p>
             <p className={css.detailDescription}>{description}</p>
             <h2 className={css.headAccessories}>
               Accessories and functionalities:
             </h2>
             <p className={css.detailAccessFunctionalAuto}>
-              <span>{accesOne}</span>
+              <span className={css.spanAccessFunctional}>{accesOne}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{accesTwo}</span>
+              <span className={css.spanAccessFunctional}>{accesTwo}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{functionalOne}</span>
+              <span className={css.spanAccessFunctional}>{functionalOne}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{accesThree}</span>
+              <span className={css.spanAccessFunctional}>{accesThree}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{functionalTwo}</span>
+              <span className={css.spanAccessFunctional}>{functionalTwo}</span>
               <img src={split_auto} alt="split auto" />
-              <span>{functionalThree}</span>
+              <span className={css.spanAccessFunctional}>
+                {functionalThree}
+              </span>
             </p>
             <h2 className={css.headRentalConditions}>Rental Conditions:</h2>
             <div className={css.rentalConditionsGroupOne}>
               <p className={css.minimumAgeParagrah}>
-                <span>Minimum age :&nbsp;</span>
-                <span>{minimumAge}</span>
+                <span className={css.spanMinimumAgeDesc}>
+                  Minimum age :&nbsp;
+                </span>
+                <span className={css.spanMinimumAgeValue}>{minimumAge}</span>
               </p>
               <p className={css.rentalConditionTwo}>
-                <span>{rentalConditionTwo}</span>
+                <span className={css.spanRentalConditionTwo}>
+                  {rentalConditionTwo}
+                </span>
               </p>
             </div>
             <div className={css.rentalConditionsGroupTwo}>
               <p className={css.rentalConditionThree}>
-                <span>{rentalConditionThree}</span>
+                <span className={css.spanRentalConditionThree}>
+                  {rentalConditionThree}
+                </span>
               </p>
               <p className={css.mileAge}>
-                <span>Mileage:&nbsp;</span>
-                <span>{mileAge}</span>
+                <span className={css.spanMileageDesc}>Mileage:&nbsp;</span>
+                <span className={css.spanMileageValue}>
+                  {convertMileAge(mileAge)}
+                </span>
               </p>
               <p className={css.price}>
-                <span>Price:&nbsp;</span>
-                <span>{rentalPrice}</span>
+                <span className={css.spanPriceDesc}>Price:&nbsp;</span>
+                <span className={css.spanPriceValue}>
+                  {changePrice(rentalPrice)}
+                </span>
               </p>
             </div>
             <a className={css.telRef} href="tel:+380730000000">
