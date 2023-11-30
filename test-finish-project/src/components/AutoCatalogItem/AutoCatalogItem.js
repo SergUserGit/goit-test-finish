@@ -26,6 +26,10 @@ const AutoCatalogItem = ({
   accesThree,
   functionalTwo,
   functionalThree,
+  minimumAge,
+  rentalConditionTwo,
+  rentalConditionThree,
+  mileAge,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -92,6 +96,11 @@ const AutoCatalogItem = ({
           accesThree={accesThree}
           functionalTwo={functionalTwo}
           functionalThree={functionalThree}
+          minimumAge={minimumAge}
+          rentalConditionTwo={rentalConditionTwo}
+          rentalConditionThree={rentalConditionThree}
+          mileAge={mileAge}
+          rentalPrice={rentalPrice}
         />
       )}
     </div>

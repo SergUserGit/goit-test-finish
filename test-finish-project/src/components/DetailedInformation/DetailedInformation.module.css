@@ -17,6 +17,7 @@
   padding-top: 15px;
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 40px;
 
 }
 
@@ -65,4 +66,90 @@
   margin: 0;
   margin-bottom: 24px;
   gap: 4px;
+}
+
+.headRentalConditions {
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.minimumAgeParagrah {
+  margin: 0;
+  border-radius: 35px;
+  background: #F9F9F9;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.rentalConditionTwo {
+  margin: 0;
+  border-radius: 35px;
+  background: #F9F9F9;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.rentalConditionThree {
+  margin: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 35px;
+  background: #F9F9F9;
+}
+
+.rentalConditionsGroupOne {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.rentalConditionsGroupTwo {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.mileAge {
+  margin: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 35px;
+  background: #F9F9F9;
+}
+
+.price {
+  margin: 0;
+  border-radius: 35px;
+  background: #F9F9F9;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.telRef {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 12px;
+  background: #3470FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
 }

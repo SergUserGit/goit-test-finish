@@ -22,6 +22,10 @@ const AutoCatalog = () => {
       accesThree="Premium audio system"
       functionalTwo="Remote start"
       functionalThree="Blind-spot monitoring"
+      minimumAge={25}
+      rentalConditionTwo="Valid driver’s license"
+      rentalConditionThree="Security deposite required"
+      mileAge={5858}
     />
   );
 };

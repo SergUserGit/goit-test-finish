@@ -22,6 +22,11 @@ const DetailedInformation = ({
   accesThree,
   functionalTwo,
   functionalThree,
+  minimumAge,
+  rentalConditionTwo,
+  rentalConditionThree,
+  mileAge,
+  rentalPrice,
 }) => {
   const [isClose, setIsClose] = useState(!isCloseProps);
 
@@ -78,6 +83,32 @@ const DetailedInformation = ({
               <img src={split_auto} alt="split auto" />
               <span>{functionalThree}</span>
             </p>
+            <h2 className={css.headRentalConditions}>Rental Conditions:</h2>
+            <div className={css.rentalConditionsGroupOne}>
+              <p className={css.minimumAgeParagrah}>
+                <span>Minimum age :&nbsp;</span>
+                <span>{minimumAge}</span>
+              </p>
+              <p className={css.rentalConditionTwo}>
+                <span>{rentalConditionTwo}</span>
+              </p>
+            </div>
+            <div className={css.rentalConditionsGroupTwo}>
+              <p className={css.rentalConditionThree}>
+                <span>{rentalConditionThree}</span>
+              </p>
+              <p className={css.mileAge}>
+                <span>Mileage:&nbsp;</span>
+                <span>{mileAge}</span>
+              </p>
+              <p className={css.price}>
+                <span>Price:&nbsp;</span>
+                <span>{rentalPrice}</span>
+              </p>
+            </div>
+            <a className={css.telRef} href="tel:+380730000000">
+              Rental car
+            </a>
           </div>
         </div>
       )}
