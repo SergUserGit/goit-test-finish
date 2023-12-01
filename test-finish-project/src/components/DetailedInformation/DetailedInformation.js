@@ -1,6 +1,5 @@
 import css from "./DetailedInformation.module.css";
 import image_close from "../../images/icon_close.svg";
-import image_test_big from "../../images/image_test_big.jpg";
 import split_auto from "../../images/split_auto.svg";
 import { useState } from "react";
 
