@@ -1,11 +1,11 @@
 import like from "../../images/heart_no_checked.svg";
 import like_checked from "../../images/heart_checked.svg";
 import split_auto from "../../images/split_auto.svg";
-import css from "./AutoCatalogItem.module.css";
+import css from "./AutoCatalogListLikesItem.module.css";
 import { useState } from "react";
 import DetailedInformation from "../DetailedInformation/DetailedInformation";
 
-const AutoCatalogItem = ({
+const AutoCatalogListLikesItem = ({
   make,
   model,
   year,
@@ -35,43 +35,7 @@ const AutoCatalogItem = ({
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
 
   function onClickButtonLike() {
-    const arrayLikeCard =
-      JSON.parse(localStorage.getItem("arrayCardItemAuto")) ?? [];
     setIsLike((state) => !state);
-    if (isLike) {
-      const arrayFilter = arrayLikeCard.filter(
-        (element) => element.idAuto !== idAuto
-      );
-      localStorage.setItem("arrayCardItemAuto", JSON.stringify(arrayFilter));
-    } else {
-      arrayLikeCard.push({
-        make,
-        model,
-        year,
-        rentalPrice,
-        adressCity,
-        adressCountry,
-        rentalCompany,
-        type,
-        idAuto,
-        functionalities,
-        fuelConsumption,
-        engineSize,
-        description,
-        accesOne,
-        accesTwo,
-        functionalOne,
-        accesThree,
-        functionalTwo,
-        functionalThree,
-        minimumAge,
-        rentalConditionTwo,
-        rentalConditionThree,
-        mileAge,
-        imgAuto,
-      });
-      localStorage.setItem("arrayCardItemAuto", JSON.stringify(arrayLikeCard));
-    }
   }
 
   function onClickButtonLearnMore() {
@@ -142,4 +106,4 @@ const AutoCatalogItem = ({
     </li>
   );
 };
-export default AutoCatalogItem;
+export default AutoCatalogListLikesItem;
