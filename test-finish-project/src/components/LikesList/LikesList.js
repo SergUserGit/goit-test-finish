@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AutoCatalogList from "../AutoCatalogListLikes/AutoCatalogListLikes";
+import css from "./LikesList.module.css";
 
 const LikesList = () => {
   const [autoCatalog, SetAutoCatalog] = useState([]);
@@ -19,6 +20,7 @@ const LikesList = () => {
         paddingBottom: "24px",
       }}
     >
+      <h1 className={css.mainHead}>Favorites auto</h1>
       <AutoCatalogList autoCatalogList={autoCatalog} />
     </div>
   );
