@@ -1,5 +1,3 @@
-import like from "../../images/heart_no_checked.svg";
-import like_checked from "../../images/heart_checked.svg";
 import split_auto from "../../images/split_auto.svg";
 import css from "./AutoCatalogListLikesItem.module.css";
 import { useState } from "react";
@@ -31,12 +29,7 @@ const AutoCatalogListLikesItem = ({
   mileAge,
   imgAuto,
 }) => {
-  const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
-
-  function onClickButtonLike() {
-    setIsLike((state) => !state);
-  }
 
   function onClickButtonLearnMore() {
     setDetailedIsOpen(true);
@@ -46,9 +39,6 @@ const AutoCatalogListLikesItem = ({
     <li className={css.mainDivAuto}>
       <div className={css.itemLike}>
         <img className={css.imageAuto} src={imgAuto} alt="card auto" />
-        <button onClick={onClickButtonLike} className={css.buttonLike}>
-          <img src={isLike ? like_checked : like} alt="like" />
-        </button>
       </div>
       <div className={css.infoModelAuto}>
         <p className={css.paragraphInfoAuto}>

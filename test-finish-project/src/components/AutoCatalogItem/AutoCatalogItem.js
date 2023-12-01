@@ -2,7 +2,7 @@ import like from "../../images/heart_no_checked.svg";
 import like_checked from "../../images/heart_checked.svg";
 import split_auto from "../../images/split_auto.svg";
 import css from "./AutoCatalogItem.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DetailedInformation from "../DetailedInformation/DetailedInformation";
 
 const AutoCatalogItem = ({
@@ -35,9 +35,9 @@ const AutoCatalogItem = ({
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
 
   function onClickButtonLike() {
+    setIsLike((state) => !state);
     const arrayLikeCard =
       JSON.parse(localStorage.getItem("arrayCardItemAuto")) ?? [];
-    setIsLike((state) => !state);
     if (isLike) {
       const arrayFilter = arrayLikeCard.filter(
         (element) => element.idAuto !== idAuto
@@ -77,6 +77,14 @@ const AutoCatalogItem = ({
   function onClickButtonLearnMore() {
     setDetailedIsOpen(true);
   }
+
+  useEffect(() => {
+    const arrayLikeCard =
+      JSON.parse(localStorage.getItem("arrayCardItemAuto")) ?? [];
+    const inArray =
+      arrayLikeCard.find((element) => element.idAuto === idAuto) === undefined;
+    setIsLike(!inArray);
+  }, [idAuto]);
 
   return (
     <li className={css.mainDivAuto}>
