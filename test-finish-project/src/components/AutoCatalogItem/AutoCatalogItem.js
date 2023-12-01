@@ -30,6 +30,7 @@ const AutoCatalogItem = ({
   rentalConditionThree,
   mileAge,
   imgAuto,
+  autoFilter,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -86,8 +87,22 @@ const AutoCatalogItem = ({
     setIsLike(!inArray);
   }, [idAuto]);
 
+  function getStyleItem() {
+    if (autoFilter === "show all") {
+      return "list-item";
+    } else if (autoFilter === make) {
+      return "list-item";
+    } else {
+      return "none";
+    }
+  }
+
+  const styleItem = {
+    display: getStyleItem(),
+  };
+
   return (
-    <li className={css.mainDivAuto}>
+    <li style={styleItem} className={css.mainDivAuto}>
       <div className={css.itemLike}>
         <img className={css.imageAuto} src={imgAuto} alt="card auto" />
         <button onClick={onClickButtonLike} className={css.buttonLike}>

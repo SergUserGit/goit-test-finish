@@ -26,7 +26,6 @@ const AutoCatalog = () => {
     "Audi",
     "BMW",
     "Chevrolet",
-    "Mercedes-Benz",
     "Chrysler",
     "Kia",
     "Land",
@@ -39,6 +38,7 @@ const AutoCatalog = () => {
   const [autoCatalog, SetAutoCatalog] = useState([]);
   const [countOfElement, SetCountOfElement] = useState(12);
   const [visibleLoadMore, SetvisibleLoadMore] = useState(true);
+  const [autoFilter, SetAutoFilter] = useState("show all");
 
   function getCopyArray(Array, indexFirst, IndexLast) {
     return Array.slice(indexFirst, IndexLast);
@@ -68,6 +68,11 @@ const AutoCatalog = () => {
       .catch((error) => {})
       .finally(() => {});
   }, []);
+
+  function onSelectDropdown(option) {
+    SetAutoFilter(option.value);
+  }
+
   return (
     <div
       style={{
@@ -77,10 +82,14 @@ const AutoCatalog = () => {
         paddingBottom: "24px",
       }}
     >
-      <Dropdown options={optionsAutoFilter} value={defaultOption} />
-
+      <Dropdown
+        options={optionsAutoFilter}
+        value={defaultOption}
+        onChange={onSelectDropdown}
+      />
       <AutoCatalogList
         autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
+        filter={autoFilter}
       />
       {visibleLoadMore && (
         <ButtonLoadMore onClickLoadeMoreBtn={onClickLoadeMoreBtn} />
