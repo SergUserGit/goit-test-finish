@@ -1,8 +1,39 @@
 import React, { useState, useEffect } from "react";
 import AutoCatalogList from "../AutoCatalogList/AutoCatalogList";
 import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+
 let page = 1;
 const AutoCatalog = () => {
+  const optionsAutoFilter = [
+    "show all",
+    "Buick",
+    "Volvo",
+    "HUMMER",
+    "Subaru",
+    "Mitsubishi",
+    "Nissan",
+    "Lincoln",
+    "GMC",
+    "Hyundai",
+    "MINI",
+    "Bentley",
+    "Mercedes-Benz",
+    "Aston Martin",
+    "Pontiac",
+    "Lamborghini",
+    "Audi",
+    "BMW",
+    "Chevrolet",
+    "Mercedes-Benz",
+    "Chrysler",
+    "Kia",
+    "Land",
+  ];
+
+  const defaultOption = optionsAutoFilter[0];
+
   const countOfPagePagination = 12;
 
   const [autoCatalog, SetAutoCatalog] = useState([]);
@@ -46,6 +77,8 @@ const AutoCatalog = () => {
         paddingBottom: "24px",
       }}
     >
+      <Dropdown options={optionsAutoFilter} value={defaultOption} />
+
       <AutoCatalogList
         autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
       />
