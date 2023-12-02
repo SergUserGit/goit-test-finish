@@ -3,6 +3,7 @@ import AutoCatalogList from "../AutoCatalogList/AutoCatalogList";
 import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import css from "./AutoCatalog.module.css";
 
 let page = 1;
 const AutoCatalog = () => {
@@ -82,11 +83,18 @@ const AutoCatalog = () => {
         paddingBottom: "24px",
       }}
     >
-      <Dropdown
-        options={optionsAutoFilter}
-        value={defaultOption}
-        onChange={onSelectDropdown}
-      />
+      <div className={css.dropdownGroup}>
+        <p className={css.dropdownDesc}>Car brand</p>
+        <Dropdown
+          options={optionsAutoFilter}
+          value={defaultOption}
+          onChange={onSelectDropdown}
+          className={css.dropdown}
+          menuClassName={css.dropdownMenu}
+          controlClassName={css.dropdownControl}
+        />
+      </div>
+
       <AutoCatalogList
         autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
         filter={autoFilter}
