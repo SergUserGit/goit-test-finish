@@ -4,9 +4,15 @@ import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import css from "./AutoCatalog.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAdverts } from "../../redux/operations";
+import { getAdverts } from "../../redux/selectors";
 
 let page = 1;
 const AutoCatalog = () => {
+  const dispatch = useDispatch();
+  const autoCatalog = useSelector(getAdverts);
+
   const optionsAutoFilter = [
     "show all",
     "Buick",
@@ -35,8 +41,6 @@ const AutoCatalog = () => {
   const defaultOption = optionsAutoFilter[0];
 
   const countOfPagePagination = 12;
-
-  const [autoCatalog, SetAutoCatalog] = useState([]);
   const [countOfElement, SetCountOfElement] = useState(12);
   const [visibleLoadMore, SetvisibleLoadMore] = useState(true);
   const [autoFilter, SetAutoFilter] = useState("show all");
@@ -55,20 +59,8 @@ const AutoCatalog = () => {
   }
 
   useEffect(() => {
-    const URL = "https://656876dd9927836bd974dc7c.mockapi.io/advert/advert";
-    fetch(URL)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        return Promise.reject(new Error(`Немає даних по запиту`));
-      })
-      .then((data) => {
-        SetAutoCatalog((state) => data);
-      })
-      .catch((error) => {})
-      .finally(() => {});
-  }, []);
+    dispatch(fetchAdverts());
+  }, [dispatch]);
 
   function onSelectDropdown(option) {
     SetAutoFilter(option.value);
