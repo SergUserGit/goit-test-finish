@@ -1,10 +1,10 @@
-import { Routes, Route, NavLink } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import css from "./App.module.css";
+//import { Routes, Route, NavLink } from "react-router-dom";
+//import { lazy, Suspense } from "react";
+//import css from "./App.module.css";
 
-const Home = lazy(() => import("./components/Home/Home"));
-const AutoCatalog = lazy(() => import("./components/AutoCatalog/AutoCatalog"));
-const LikesList = lazy(() => import("./components/LikesList/LikesList"));
+//const Home = lazy(() => import("./components/Home/Home"));
+//const AutoCatalog = lazy(() => import("./components/AutoCatalog/AutoCatalog"));
+//const LikesList = lazy(() => import("./components/LikesList/LikesList"));
 
 function App() {
   return <div></div>;
