@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .modalDetail {
@@ -63,6 +67,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  font-family: 'Manrope';
 }
 
 .headAccessories {
@@ -74,6 +79,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  font-family: 'Manrope';
 }
 
 .detailAccessFunctionalAuto {
@@ -94,6 +100,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  font-family: 'Manrope';
 }
 
 .minimumAgeParagrah {
@@ -190,6 +197,7 @@
   align-items: center;
   justify-content: center;
   width: 108px;
+  font-family: 'Manrope';
 }
 
 .spanMakeDetail {
@@ -198,6 +206,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: 'Manrope';
 }
 
 .spanModelDetail {
@@ -206,6 +215,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: 'Manrope';
 }
 
 .spanSplitlDetail {
@@ -214,6 +224,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: 'Manrope';
 }
 
 .spanYearlDetail {
@@ -222,6 +233,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  font-family: 'Manrope';
 }
 
 .spanDetailCharakte {
@@ -230,6 +242,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  font-family: 'Manrope';
 }
 
 .spanAccessFunctional {
@@ -238,7 +251,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-
+  font-family: 'Manrope';
 }
 
 .spanMinimumAgeDesc {
@@ -248,6 +261,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
 
 .spanMinimumAgeValue {
@@ -257,6 +271,7 @@
   font-weight: 600;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
 
 .spanRentalConditionTwo {
@@ -265,6 +280,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  font-family: 'Manrope';
 }
 
 .spanRentalConditionThree {
@@ -273,6 +289,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  font-family: 'Manrope';
 }
 
 .spanMileageDesc {
@@ -282,6 +299,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
 
 .spanMileageValue {
@@ -291,6 +309,7 @@
   font-weight: 600;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
 
 .spanPriceDesc {
@@ -300,6 +319,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
 
 .spanPriceValue {
@@ -309,4 +329,5 @@
   font-weight: 600;
   line-height: 18px;
   letter-spacing: -0.24px;
+  font-family: 'Montserrat';
 }
