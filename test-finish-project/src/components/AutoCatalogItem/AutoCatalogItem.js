@@ -31,6 +31,7 @@ const AutoCatalogItem = ({
   mileAge,
   imgAuto,
   autoFilter,
+  autoFilterPrice,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -88,9 +89,13 @@ const AutoCatalogItem = ({
   }, [idAuto]);
 
   function getStyleItem() {
-    if (autoFilter === "show all") {
+    if (autoFilter === "show all" && autoFilterPrice === "$show all") {
       return "list-item";
-    } else if (autoFilter === make) {
+    } else if (autoFilter === make && autoFilterPrice === rentalPrice) {
+      return "list-item";
+    } else if (autoFilter === make && autoFilterPrice === "$show all") {
+      return "list-item";
+    } else if (autoFilter === "show all" && autoFilterPrice === rentalPrice) {
       return "list-item";
     } else {
       return "none";

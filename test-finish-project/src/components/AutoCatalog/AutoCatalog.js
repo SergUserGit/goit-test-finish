@@ -44,6 +44,7 @@ const AutoCatalog = () => {
   const [countOfElement, SetCountOfElement] = useState(12);
   const [visibleLoadMore, SetvisibleLoadMore] = useState(true);
   const [autoFilter, SetAutoFilter] = useState("show all");
+  const [autoFilterPrice, SetAutoFilterPrice] = useState("$show all");
 
   function getCopyArray(Array, indexFirst, IndexLast) {
     return Array.slice(indexFirst, IndexLast);
@@ -66,6 +67,28 @@ const AutoCatalog = () => {
     SetAutoFilter(option.value);
   }
 
+  function onSelectDropdownPrice(option) {
+    SetAutoFilterPrice("$" + option.value);
+  }
+
+  function getArrayPrices(arrayOfPrice) {
+    let newArray = [];
+    for (const i of arrayOfPrice) {
+      const findElement = newArray.find((el) => el === i);
+      if (findElement === undefined) {
+        newArray.push(i);
+      }
+    }
+    newArray.sort((a, b) => a - b);
+    return ["show all", ...newArray.map((el) => String(el))];
+  }
+
+  const pricesFilter = getArrayPrices(
+    autoCatalog.map((el) => parseInt(el.rentalPrice.replace("$", "")))
+  );
+
+  const defaultOptionPricesFilter = pricesFilter[0];
+
   return (
     <div
       style={{
@@ -75,21 +98,35 @@ const AutoCatalog = () => {
         paddingBottom: "24px",
       }}
     >
-      <div className={css.dropdownGroup}>
-        <p className={css.dropdownDesc}>Car brand</p>
-        <Dropdown
-          options={optionsAutoFilter}
-          value={defaultOption}
-          onChange={onSelectDropdown}
-          className={css.dropdown}
-          menuClassName={css.dropdownMenu}
-          controlClassName={css.dropdownControl}
-        />
+      <div className={css.dropdownGroupFlex}>
+        <div>
+          <p className={css.dropdownDesc}>Car brand</p>
+          <Dropdown
+            options={optionsAutoFilter}
+            value={defaultOption}
+            onChange={onSelectDropdown}
+            className={css.dropdown}
+            menuClassName={css.dropdownMenu}
+            controlClassName={css.dropdownControl}
+          />
+        </div>
+        <div>
+          <p className={css.dropdownDesc}>Price/ 1 hour</p>
+          <Dropdown
+            options={pricesFilter}
+            value={defaultOptionPricesFilter}
+            className={css.dropdown}
+            menuClassName={css.dropdownMenu}
+            controlClassName={css.dropdownControl}
+            onChange={onSelectDropdownPrice}
+          />
+        </div>
       </div>
 
       <AutoCatalogList
         autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
         filter={autoFilter}
+        filterPrice={autoFilterPrice}
       />
       {visibleLoadMore && (
         <ButtonLoadMore onClickLoadeMoreBtn={onClickLoadeMoreBtn} />

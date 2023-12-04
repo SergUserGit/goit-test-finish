@@ -35,3 +35,10 @@
   margin-left: 180px;
   margin-top: 50px;
 }
+
+.dropdownGroupFlex {
+  display: flex;
+  gap: 18px;
+  margin-left: 180px;
+  margin-top: 50px;
+}

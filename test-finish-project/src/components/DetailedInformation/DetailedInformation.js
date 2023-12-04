@@ -27,7 +27,7 @@ const DetailedInformation = ({
   rentalPrice,
   imgAuto,
 }) => {
-  const [isClose, setIsClose] = useState(false);
+  const [idClose, setIdClose] = useState(false);
 
   function convertMileAge(mileAge) {
     const valueOne = mileAge / 1000;
@@ -39,12 +39,12 @@ const DetailedInformation = ({
   }
 
   function onClickButtonIsClose() {
-    setIsClose(true);
+    setIdClose(true);
   }
 
   return (
     <>
-      {isClose === false && (
+      {idClose === false && (
         <div onClick={onClickButtonIsClose} className={css.backDrop}>
           <div className={css.modalDetail}>
             <button onClick={onClickButtonIsClose} className={css.buttonClose}>
