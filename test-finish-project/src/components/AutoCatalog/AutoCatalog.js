@@ -121,6 +121,21 @@ const AutoCatalog = () => {
             onChange={onSelectDropdownPrice}
           />
         </div>
+        <div>
+          <p className={css.dropdownDesc}>Сar mileage / km</p>
+          <input
+            className={css.inputMileage}
+            type="text"
+            name="mileageone"
+            id="mileageone"
+          />
+          <input
+            className={css.inputMileageTwo}
+            type="text"
+            name="mileagetwo"
+            id="mileagetwo"
+          />
+        </div>
       </div>
 
       <AutoCatalogList

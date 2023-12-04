@@ -42,3 +42,32 @@
   margin-left: 180px;
   margin-top: 50px;
 }
+
+.inputMileage {
+  padding: 6px 63px 6px 24px;
+  border-radius: 14px 0px 0px 14px;
+  border-right: 1px solid rgba(138, 138, 137, 0.20);
+  background: #F7F7FB;
+  color: #121417;
+  font-family: 'Manrope';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  width: 132px;
+
+}
+
+.inputMileageTwo {
+  width: 160px;
+  padding: 6px 63px 6px 24px;
+  border-radius: 0px 14px 14px 0px;
+  background: #F7F7FB;
+  color: #121417;
+
+  font-family: 'Manrope';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
