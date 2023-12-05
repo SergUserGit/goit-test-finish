@@ -1,7 +1,7 @@
 {
   "name": "test-finish-project",
   "version": "0.1.0",
-  "homepage": "https://SergUserGit.github.io/goit-test-finish",
+  "homepage": "https://sergusergit.github.io/goit-test-finish",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
