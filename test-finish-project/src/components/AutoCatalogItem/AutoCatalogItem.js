@@ -32,6 +32,8 @@ const AutoCatalogItem = ({
   imgAuto,
   autoFilter,
   autoFilterPrice,
+  autoFilterMilOne,
+  autoFilterMilTwo,
 }) => {
   const [isLike, setIsLike] = useState(false);
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
@@ -89,16 +91,106 @@ const AutoCatalogItem = ({
   }, [idAuto]);
 
   function getStyleItem() {
-    if (autoFilter === "show all" && autoFilterPrice === "$show all") {
-      return "list-item";
-    } else if (autoFilter === make && autoFilterPrice === rentalPrice) {
-      return "list-item";
-    } else if (autoFilter === make && autoFilterPrice === "$show all") {
-      return "list-item";
-    } else if (autoFilter === "show all" && autoFilterPrice === rentalPrice) {
-      return "list-item";
-    } else {
-      return "none";
+    if (autoFilterMilOne === 0 && autoFilterMilTwo === 0) {
+      if (autoFilter === "show all" && autoFilterPrice === "$show all") {
+        return "list-item";
+      } else if (autoFilter === make && autoFilterPrice === rentalPrice) {
+        return "list-item";
+      } else if (autoFilter === make && autoFilterPrice === "$show all") {
+        return "list-item";
+      } else if (autoFilter === "show all" && autoFilterPrice === rentalPrice) {
+        return "list-item";
+      } else {
+        return "none";
+      }
+    } else if (autoFilterMilOne === 0 && autoFilterMilTwo !== 0) {
+      if (
+        autoFilter === "show all" &&
+        autoFilterPrice === "$show all" &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === rentalPrice &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === "$show all" &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === "show all" &&
+        autoFilterPrice === rentalPrice &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else {
+        return "none";
+      }
+    } else if (autoFilterMilOne !== 0 && autoFilterMilTwo === 0) {
+      if (
+        autoFilter === "show all" &&
+        autoFilterPrice === "$show all" &&
+        mileAge >= autoFilterMilOne
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === rentalPrice &&
+        mileAge >= autoFilterMilOne
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === "$show all" &&
+        mileAge >= autoFilterMilOne
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === "show all" &&
+        autoFilterPrice === rentalPrice &&
+        mileAge >= autoFilterMilOne
+      ) {
+        return "list-item";
+      } else {
+        return "none";
+      }
+    } else if (autoFilterMilOne !== 0 && autoFilterMilTwo !== 0) {
+      if (
+        autoFilter === "show all" &&
+        autoFilterPrice === "$show all" &&
+        mileAge >= autoFilterMilOne &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === rentalPrice &&
+        mileAge >= autoFilterMilOne &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === make &&
+        autoFilterPrice === "$show all" &&
+        mileAge >= autoFilterMilOne &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else if (
+        autoFilter === "show all" &&
+        autoFilterPrice === rentalPrice &&
+        mileAge >= autoFilterMilOne &&
+        mileAge <= autoFilterMilTwo
+      ) {
+        return "list-item";
+      } else {
+        return "none";
+      }
     }
   }
 

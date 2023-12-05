@@ -45,6 +45,18 @@ const AutoCatalog = () => {
   const [visibleLoadMore, SetvisibleLoadMore] = useState(true);
   const [autoFilter, SetAutoFilter] = useState("show all");
   const [autoFilterPrice, SetAutoFilterPrice] = useState("$show all");
+  const [mileageOneFilter, SetMileageOneFilter] = useState(0);
+  const [mileageTwoFilter, SetMileageTwoFilter] = useState(0);
+
+  function onChangeMileageOne(e) {
+    const { value } = e.target;
+    SetMileageOneFilter(parseInt(value));
+  }
+
+  function onChangeMileageTwo(e) {
+    const { value } = e.target;
+    SetMileageTwoFilter(parseInt(value));
+  }
 
   function getCopyArray(Array, indexFirst, IndexLast) {
     return Array.slice(indexFirst, IndexLast);
@@ -124,16 +136,20 @@ const AutoCatalog = () => {
         <div>
           <p className={css.dropdownDesc}>Сar mileage / km</p>
           <input
+            value={mileageOneFilter}
             className={css.inputMileage}
-            type="text"
+            type="number"
             name="mileageone"
             id="mileageone"
+            onChange={onChangeMileageOne}
           />
           <input
+            value={mileageTwoFilter}
             className={css.inputMileageTwo}
-            type="text"
+            type="number"
             name="mileagetwo"
             id="mileagetwo"
+            onChange={onChangeMileageTwo}
           />
         </div>
       </div>
@@ -142,6 +158,8 @@ const AutoCatalog = () => {
         autoCatalogList={getCopyArray(autoCatalog, 0, countOfElement)}
         filter={autoFilter}
         filterPrice={autoFilterPrice}
+        filterMilOne={parseInt(mileageOneFilter)}
+        filterMilTwo={parseInt(mileageTwoFilter)}
       />
       {visibleLoadMore && (
         <ButtonLoadMore onClickLoadeMoreBtn={onClickLoadeMoreBtn} />

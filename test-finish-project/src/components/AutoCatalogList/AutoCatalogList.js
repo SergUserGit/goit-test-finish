@@ -1,7 +1,13 @@
 import css from "./AutoCatalogList.module.css";
 import AutoCatalogItem from "../AutoCatalogItem/AutoCatalogItem";
 
-const AutoCatalogList = function ({ autoCatalogList, filter, filterPrice }) {
+const AutoCatalogList = function ({
+  autoCatalogList,
+  filter,
+  filterPrice,
+  filterMilOne,
+  filterMilTwo,
+}) {
   function getArrayAddres(adress) {
     return adress.split(",");
   }
@@ -63,6 +69,8 @@ const AutoCatalogList = function ({ autoCatalogList, filter, filterPrice }) {
             imgAuto={img}
             autoFilter={filter}
             autoFilterPrice={filterPrice}
+            autoFilterMilOne={filterMilOne}
+            autoFilterMilTwo={filterMilTwo}
           />
         )
       )}
