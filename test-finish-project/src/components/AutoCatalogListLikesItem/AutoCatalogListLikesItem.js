@@ -32,7 +32,7 @@ const AutoCatalogListLikesItem = ({
   const [detailedIsOpen, setDetailedIsOpen] = useState(false);
 
   function onClickButtonLearnMore() {
-    setDetailedIsOpen(true);
+    setDetailedIsOpen((state) => !state);
   }
 
   return (
@@ -91,6 +91,7 @@ const AutoCatalogListLikesItem = ({
           mileAge={mileAge}
           rentalPrice={rentalPrice}
           imgAuto={imgAuto}
+          setDetailedIsOpen={setDetailedIsOpen}
         />
       )}
     </li>

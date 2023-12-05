@@ -257,6 +257,7 @@ const AutoCatalogItem = ({
           mileAge={mileAge}
           rentalPrice={rentalPrice}
           imgAuto={imgAuto}
+          setDetailedIsOpen={setDetailedIsOpen}
         />
       )}
     </li>

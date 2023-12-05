@@ -26,6 +26,7 @@ const DetailedInformation = ({
   mileAge,
   rentalPrice,
   imgAuto,
+  setDetailedIsOpen,
 }) => {
   const [idClose, setIdClose] = useState(false);
 
@@ -40,6 +41,7 @@ const DetailedInformation = ({
 
   function onClickButtonIsClose() {
     setIdClose(true);
+    setDetailedIsOpen(false);
   }
 
   return (
