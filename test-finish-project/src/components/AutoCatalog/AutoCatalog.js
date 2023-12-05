@@ -50,12 +50,12 @@ const AutoCatalog = () => {
 
   function onChangeMileageOne(e) {
     const { value } = e.target;
-    SetMileageOneFilter(parseInt(value));
+    SetMileageOneFilter(value);
   }
 
   function onChangeMileageTwo(e) {
     const { value } = e.target;
-    SetMileageTwoFilter(parseInt(value));
+    SetMileageTwoFilter(value);
   }
 
   function getCopyArray(Array, indexFirst, IndexLast) {
