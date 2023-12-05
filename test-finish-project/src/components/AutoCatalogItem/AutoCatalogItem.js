@@ -79,7 +79,7 @@ const AutoCatalogItem = ({
   }
 
   function onClickButtonLearnMore() {
-    setDetailedIsOpen(true);
+    setDetailedIsOpen((state) => !state);
   }
 
   useEffect(() => {
